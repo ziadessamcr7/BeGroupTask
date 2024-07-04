@@ -234,6 +234,15 @@ li {
     z-index: -255522;
 }
 
+#news article .card-text div {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#news article .card-text span {
+    font-size: 12px;
+}
+
 #news article::before {
 
     content: 'معرفة';
