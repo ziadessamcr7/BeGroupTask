@@ -1,0 +1,328 @@
+:root {
+    --maincolor: rgb(55, 190, 116);
+    --mainFontSize: 15px;
+    --ButtonColors: white;
+    --NavFontSise: 14px;
+    --PaddingForSections: 75px 0;
+}
+
+body {
+    background-color: rgb(240, 240, 245);
+    scrollbar-color: red;
+}
+
+html {
+    scrollbar-color: blue;
+}
+
+::-webkit-scrollbar {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--maincolor);
+    border-radius: 10px;
+}
+
+
+
+.top {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: var(--ButtonColors);
+}
+
+body>header:first-child {
+    background-image: url('../imgs/HeaderBg.jpeg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85vh;
+    background-color: rgb(9 48 14 / 63%);
+    background-blend-mode: overlay;
+}
+
+.borderr {
+    border-right: 1px solid white;
+}
+
+nav {
+    background-color: rgb(0 0 0 / 50%);
+
+}
+
+nav img {
+    height: 77px;
+    width: 72px;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: var(--NavFontSise);
+    color: white;
+
+}
+
+.fa-bars {
+    cursor: pointer;
+}
+
+button {
+    color: white !important;
+    border: 0px solid white !important;
+    border-radius: 15px !important;
+    padding: 7px 20px !important;
+    font-size: var(--NavFontSise) !important;
+    background-color: var(--maincolor) !important;
+    font-weight: 700;
+}
+
+
+#Fullnavbar button:first-child {
+    background-color: transparent !important;
+    border: 1px solid var(--maincolor) !important;
+}
+
+#Fullnavbar button:first-child:hover {
+    background-color: var(--maincolor) !important;
+}
+
+
+button:hover {
+    background-color: var(--maincolor) !important;
+}
+
+body .container:last-of-type {
+    height: 65%;
+}
+
+#hidden-nav {
+    background-color: rgb(0 0 0 / 70%);
+    position: fixed;
+    width: 100%;
+    z-index: 555544444445;
+}
+
+#side-nav {
+    background-color: rgb(0 0 0 / 70%);
+    color: white;
+    font-size: 14px;
+    width: 200px;
+    position: fixed;
+    right: -200px;
+    top: 87px;
+    z-index: 55555;
+    height: 88vh;
+}
+
+li {
+    padding: 10px 0;
+    list-style-type: none;
+}
+
+#services article {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+#services article button {
+    background-color: transparent !important;
+    border: 2px solid gray !important;
+    color: var(--maincolor) !important;
+}
+
+#services article h6 {
+    font-size: 13px;
+    font-weight: 800;
+}
+
+#services article p {
+    font-size: 12px;
+    color: #000;
+}
+
+#about-us {
+    background-color: white;
+    padding: var(--PaddingForSections);
+}
+
+#about-us .img-wrapper {
+    border: 5px solid var(--maincolor);
+    height: 87%;
+    margin-bottom: 40px;
+    border-radius: 50px 50px 20px 20px;
+}
+
+
+#about-us .inner-image {
+    position: absolute;
+    right: 16px;
+    left: -37px;
+    top: -22px;
+    border-radius: 50px 50px 20px 20px;
+}
+
+#about-us h5 {
+    color: var(--maincolor);
+}
+
+#about-us i {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: var(--maincolor);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    color: white;
+}
+
+#about-us span {
+    font-size: 12px;
+}
+
+#about-us button {
+    background-color: transparent !important;
+    border: 2px solid rgb(216, 216, 216) !important;
+    color: rgb(92, 91, 91) !important;
+}
+
+#about-us .img-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -55px;
+    bottom: -20px;
+    left: 93px;
+    background: radial-gradient(circle, #00bfa6 2px, transparent 2px);
+    background-size: 20px 20px;
+    z-index: 0;
+    border-radius: 10px;
+    height: 100px;
+}
+
+#news {
+    padding: var(--PaddingForSections);
+}
+
+#news h5 {
+    color: var(--maincolor);
+}
+
+#news article div:nth-child(1) {
+
+    background-color: rgb(240, 237, 227);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#news article .card-text {
+    padding: 15px;
+}
+
+#news article>div {
+    box-shadow: 4px 8px 20px grey;
+}
+
+#news article {
+    position: relative;
+    z-index: -255522;
+}
+
+#news article::before {
+
+    content: 'معرفة';
+    z-index: 5555555;
+    position: absolute;
+    right: 22px;
+    top: 10px;
+    background-color: white;
+    padding: 2px 12px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+#services {
+    /* background-color: red; */
+    padding: var(--PaddingForSections);
+}
+
+#services h5 {
+    color: var(--maincolor);
+}
+
+#counter {
+    background-image: url('../imgs/bussinessBg.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: overlay;
+    background-attachment: fixed;
+}
+
+#counter p {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+#contact-us {
+    background-color: white;
+    padding: var(--PaddingForSections);
+}
+
+
+#contact-us input,
+textarea {
+    display: block;
+    width: 94%;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--maincolor);
+}
+
+#contact-us p {
+    color: var(--maincolor);
+}
+
+#footer {
+    background-color: #000;
+    padding: var(--PaddingForSections);
+}
+
+#footer h5 {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+#footer .socilas i {
+    width: 40px;
+    height: 40px;
+    border: 1px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+}
+
+#footer p {
+    font-size: 11px;
+    color: #acacac;
+    font-weight: 600;
+}
+
+#btnUp {
+    color: white;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    display: none;
+}
