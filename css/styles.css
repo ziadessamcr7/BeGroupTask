@@ -2,7 +2,7 @@
     --maincolor: rgb(55, 190, 116);
     --mainFontSize: 15px;
     --ButtonColors: white;
-    --NavFontSise: 14px;
+    --NavFontSise: 18px;
     --PaddingForSections: 75px 0;
 }
 
@@ -132,16 +132,22 @@ li {
     background-color: transparent !important;
     border: 2px solid gray !important;
     color: var(--maincolor) !important;
+    font-size: 14px !important;
+
+}
+
+#services article button:hover {
+    background-color: rgb(240, 240, 240) !important;
 }
 
 #services article h6 {
-    font-size: 13px;
+    font-size: 22px;
     font-weight: 800;
 }
 
 #services article p {
-    font-size: 12px;
-    color: #000;
+    font-size: 14px;
+    color: #575757;
 }
 
 #about-us {
@@ -183,7 +189,7 @@ li {
 }
 
 #about-us span {
-    font-size: 12px;
+    font-size: 18px;
 }
 
 #about-us button {
@@ -240,7 +246,7 @@ li {
 }
 
 #news article .card-text span {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 #news article::before {
@@ -277,7 +283,7 @@ li {
 }
 
 #counter p {
-    font-size: 13px;
+    font-size: 25px;
     font-weight: 700;
 }
 
@@ -299,6 +305,7 @@ textarea {
 
 #contact-us p {
     color: var(--maincolor);
+    font-size: 1.25rem;
 }
 
 #footer {
@@ -323,7 +330,7 @@ textarea {
 }
 
 #footer p {
-    font-size: 11px;
+    font-size: 16px;
     color: #acacac;
     font-weight: 600;
 }
