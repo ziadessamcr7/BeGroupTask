@@ -4,11 +4,39 @@
     --ButtonColors: white;
     --NavFontSise: 18px;
     --PaddingForSections: 75px 0;
+
+    /* Light theme defaults */
+    --bg-color: rgb(240, 240, 245);
+    --text-color: #111827;
+    --muted-text-color: #4b5563;
+    --nav-bg-color: rgba(0, 0, 0, 0.5);
+    --card-bg-color: #ffffff;
+    --footer-bg-color: #000000;
+    --input-bg-color: #ffffff;
+    --border-color: rgba(148, 163, 184, 0.6);
 }
 
 body {
-    background-color: rgb(240, 240, 245);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     scrollbar-color: red;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    --bg-color: #020617;
+    --text-color: #e5e7eb;
+    --muted-text-color: #9ca3af;
+    --nav-bg-color: rgba(15, 23, 42, 0.9);
+    --card-bg-color: #020617;
+    --footer-bg-color: #020617;
+    --input-bg-color: #020617;
+    --border-color: rgba(75, 85, 99, 0.8);
+    --maincolor: rgb(56, 189, 248);
+}
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 html {
@@ -47,8 +75,7 @@ body>header:first-child {
 }
 
 nav {
-    background-color: rgb(0 0 0 / 50%);
-
+    background-color: var(--nav-bg-color);
 }
 
 nav img {
@@ -75,6 +102,8 @@ button {
     font-size: var(--NavFontSise) !important;
     background-color: var(--maincolor) !important;
     font-weight: 700;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 
@@ -90,6 +119,8 @@ button {
 
 button:hover {
     background-color: var(--maincolor) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(15, 23, 42, 0.2);
 }
 
 body .container:last-of-type {
@@ -121,11 +152,13 @@ li {
 }
 
 #services article {
-    background-color: white;
+    background-color: var(--card-bg-color);
     border-radius: 20px;
     overflow: hidden;
     text-align: center;
-
+    box-shadow: 0 0 0 rgba(15, 23, 42, 0.0);
+    transform: translateY(0);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 #services article button {
@@ -147,11 +180,16 @@ li {
 
 #services article p {
     font-size: 14px;
-    color: #575757;
+    color: var(--muted-text-color);
+}
+
+#services article:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 35px rgba(15, 23, 42, 0.35);
 }
 
 #about-us {
-    background-color: white;
+    background-color: var(--card-bg-color);
     padding: var(--PaddingForSections);
 }
 
@@ -221,7 +259,6 @@ li {
 }
 
 #news article div:nth-child(1) {
-
     background-color: rgb(240, 237, 227);
     border-radius: 8px;
     overflow: hidden;
@@ -232,7 +269,8 @@ li {
 }
 
 #news article>div {
-    box-shadow: 4px 8px 20px grey;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 #news article {
@@ -247,6 +285,11 @@ li {
 
 #news article .card-text span {
     font-size: 14px;
+}
+
+#news article:hover>div {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 35px rgba(15, 23, 42, 0.4);
 }
 
 #news article::before {
@@ -288,7 +331,7 @@ li {
 }
 
 #contact-us {
-    background-color: white;
+    background-color: var(--card-bg-color);
     padding: var(--PaddingForSections);
 }
 
@@ -300,7 +343,9 @@ textarea {
     margin: 15px;
     padding: 10px;
     border-radius: 10px;
-    border: 1px solid var(--maincolor);
+    border: 1px solid var(--border-color);
+    background-color: var(--input-bg-color);
+    color: var(--text-color);
 }
 
 #contact-us p {
@@ -309,7 +354,7 @@ textarea {
 }
 
 #footer {
-    background-color: #000;
+    background-color: var(--footer-bg-color);
     padding: var(--PaddingForSections);
 }
 
@@ -331,7 +376,7 @@ textarea {
 
 #footer p {
     font-size: 16px;
-    color: #acacac;
+    color: var(--muted-text-color);
     font-weight: 600;
 }
 
@@ -341,4 +386,16 @@ textarea {
     bottom: 40px;
     right: 40px;
     display: none;
+}
+
+/* Scroll-in animations */
+.animate-section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }

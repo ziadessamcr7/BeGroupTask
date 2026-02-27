@@ -52,7 +52,10 @@
                 <div class="row justify-content-start">
                     <div class="col-md-12 bg-nfo">
                         <div class="d-flex align-items-center justify-content-between">
-                            <div>
+                            <div class="d-flex align-items-center gap-2">
+                                <button class="btn" id="themeToggle" aria-label="تبديل وضع الصفحة">
+                                    <i class="fa fa-moon"></i>
+                                </button>
                                 <img src="imgs/ipa_logo.png" alt="ll">
                                 <img src="imgs/e3mal-removebg-preview.png" alt="ll">
 
@@ -93,10 +96,13 @@
                     <li> <a href="#services"> الخدمات </a></li>
                     <li> <a href="#news"> الأخبار </a> </li>
                     <li> <a href="#contact-us"> تواصل معنا </a> </li>
-                    <div class="d-flex flex-wrap justify-content-start mt-3">
-                        <button> دخول </button>
-                        <button class="me-2"> <i class="fa fa-globe"></i> </button>
-                        <button class="my-2"> مستخدم جديد </button>
+                    <div class="d-flex flex-wrap justify-content-start mt-3 align-items-center">
+                        <button id="themeToggleMobile" class="me-2" aria-label="تبديل وضع الصفحة">
+                            <i class="fa fa-moon"></i>
+                        </button>
+                        <button class="my-1"> دخول </button>
+                        <button class="me-2 my-1"> <i class="fa fa-globe"></i> </button>
+                        <button class="my-1"> مستخدم جديد </button>
                     </div>
                 </ul>
 
@@ -138,7 +144,7 @@
 
 
     <!-- START SERVICES -->
-    <section id="services">
+    <section id="services" class="animate-section">
         <div class="text-center mb-5">
             <h5>الشهادات اللإحترافية</h5>
             <h3>الشهادات المقدمة من قبل مركز الاعمال</h3>
@@ -165,7 +171,7 @@
 
 
     <!-- START ABOOUT-US -->
-    <section id="about-us">
+    <section id="about-us" class="animate-section">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-11">
@@ -222,7 +228,7 @@
     <!-- END ABOOUT-US -->
 
     <!-- START COUNTER -->
-    <section id="counter">
+    <section id="counter" class="animate-section">
         <div class="container h-100 text-center">
             <div class="row text-white align-items-center h-100 gx-3">
 
@@ -256,7 +262,7 @@
     <!-- END COUNTER -->
 
     <!-- START NEWS -->
-    <section id="news">
+    <section id="news" class="animate-section">
         <div class=" text-center mb-5">
             <h5>الاخبار</h5>
             <h3>اخر اخبار مركز الأعمال</h3>
@@ -322,7 +328,7 @@
     <!-- END NEWS -->
 
     <!-- START CONTACT-US -->
-    <section id="contact-us">
+    <section id="contact-us" class="animate-section">
         <div class="container">
             <div class="row">
                 <div class="text-center">
